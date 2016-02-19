@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
 
 	def create
 		Message.create(body: params[:message][:body], username: session[:username])
+
 		redirect_to messages_url
 	end
 end
