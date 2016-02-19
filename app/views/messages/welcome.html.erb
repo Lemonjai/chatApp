@@ -1,0 +1,20 @@
+<div class="container">
+
+  <pre>
+    <%= session[:username] %>
+  </pre>
+
+  <%= form_tag action: :login do %>
+    <fieldset class="border">
+      <div class="field">
+        <%= label_tag :username, "Choose a username" %>
+          <div class="control">
+            <%= text_field_tag :username %>
+          </div>
+      </div>
+      <div class="actions">
+        <%= submit_tag "Send", class: "btn btn-primary" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
