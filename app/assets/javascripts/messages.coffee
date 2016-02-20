@@ -2,7 +2,7 @@ ready = ->
 
   $("#new_message").on("ajax:complete", (event, data, status) ->
     $("#message_body").val("")
-    message = JSON.parse(data.responseText).message.body
+    message = JSON.parse(data.responseText).message.username + " " + JSON.parse(data.responseText).message.body
     $(".messages ul").append("<li>#{message}</li>")
     )
 
